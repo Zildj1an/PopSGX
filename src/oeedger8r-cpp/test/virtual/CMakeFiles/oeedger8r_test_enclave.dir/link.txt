@@ -1,0 +1,2 @@
+/usr/bin/llvm-ar-10 qc liboeedger8r_test_enclave.a CMakeFiles/oeedger8r_test_enclave.dir/enclave.cpp.o
+/usr/bin/llvm-ranlib-10 liboeedger8r_test_enclave.a

@@ -1,0 +1,1 @@
+/usr/bin/clang++-10 -fPIC -g -shared -Wl,-soname,oeedger8r_basic_enc.so -o oeedger8r_basic_enc.so CMakeFiles/oeedger8r_basic_enc.dir/basic_t.c.o CMakeFiles/oeedger8r_basic_enc.dir/enc.cpp.o  ../../virtual/liboeedger8r_test_enclave.a 

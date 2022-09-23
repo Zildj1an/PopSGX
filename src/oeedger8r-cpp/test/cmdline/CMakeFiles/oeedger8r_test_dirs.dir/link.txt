@@ -1,0 +1,2 @@
+/usr/bin/llvm-ar-10 qc liboeedger8r_test_dirs.a CMakeFiles/oeedger8r_test_dirs.dir/trusted-dir/bar/x/basic_t.c.o CMakeFiles/oeedger8r_test_dirs.dir/untrusted-dir/bar/y/basic_u.c.o
+/usr/bin/llvm-ranlib-10 liboeedger8r_test_dirs.a

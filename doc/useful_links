@@ -1,0 +1,11 @@
+Intel SGX              [https://software.intel.com/content/www/us/en/develop/topics/software-guard-extensions.html
+Intel SGX review       [https://blog.quarkslab.com/overview-of-intel-sgx-part-1-sgx-internals.html]
+SGX Hardware list      [https://github.com/ayeks/SGX-hardware]
+Intel manuals          [https://download.01.org/intel-sgx/latest/linux-latest/docs/]
+Open Enclave SDK       [https://openenclave.io/sdk/]
+Linux SGX              [https://github.com/intel/linux-sgx]
+SGX proxies            [https://software.intel.com/content/www/us/en/develop/articles/intel-software-guard-extensions-tutorial-part-7-refining-the-enclave.html]
+Article on SGX         [https://medium.com/magicofc/the-magic-of-intels-sgx-how-to-hello-it-sec-world-fb0295d6c33b]
+GNU SGX Autoconf       [https://software.intel.com/content/www/us/en/develop/articles/intel-sgx-templates-for-the-gnu-autoconf-build-system.html]
+SGX SDK enclave        [https://insujang.github.io/2017-04-14/intel-sgx-sdk-functions-for-enclave-creation/]
+SDK full Manual        [https://download.01.org/intel-sgx/linux-2.3.1/docs/Intel_SGX_Developer_Reference_Linux_2.3.1_Open_Source.pdf]     

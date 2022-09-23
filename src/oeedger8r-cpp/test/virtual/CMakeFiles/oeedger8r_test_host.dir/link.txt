@@ -1,0 +1,2 @@
+/usr/bin/llvm-ar-10 qc liboeedger8r_test_host.a CMakeFiles/oeedger8r_test_host.dir/host.cpp.o
+/usr/bin/llvm-ranlib-10 liboeedger8r_test_host.a

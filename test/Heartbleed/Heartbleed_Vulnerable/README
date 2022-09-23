@@ -1,0 +1,20 @@
+# Protecting Heartbleed with PopSGX
+
+To replicate the vulnerability, you can run the example server of the vulnerable
+OpenSSL version, by doing:
+
+```
+$ cd openssl_src
+$ ./config
+$ make -j<threads>
+$ cd apps
+$ ./openssl s_server
+```
+since you don't specify port, the connections accepted will be on port 4433.
+Hence, go to the example client and run the attack:
+
+```
+$ cd  heartbleed-client
+$ gcc -o heart heartbleed.c
+$ ./heart 127.0.0.1 4433
+```

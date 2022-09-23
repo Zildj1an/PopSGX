@@ -1,0 +1,29 @@
+##############################
+EXPLANATION OF oeedger8r-cpp
+##############################
+
+-> main.cpp generates trusted and untrusted (ln. 146)
+|
+---> File helloworld_args.h is generated in emit() at args_h_emitter.h
+|    and contains OE structure definitions.
+|
+---> File helloworld_u.h is generated in emit_u_h() at h_emitter.h and 
+|    contains OE function prototypes and ECALL/OCALL function definitions.
+|    |
+|    ---> ecalls are filled with trusted_prototypes() 
+|    ---> ocalls are filled with untrusted_prototypes()
+|    ---> Both calls use function prototype() from utils.h
+|
+---> File helloworld_u.c is generated in emit_u_c() at c_emitter.h
+
+TODO FOR UNTRUSTED:
+     * Remove the generation of _u.c file
+     * Modify the generation of the _u.h file to wrap PopSGX
+
+---
+
+If we add --pop-sgx, the generation of header and c will differ.
+The ubin func request gets wrapped, received at the server. The server ubin
+is busy waiting, gets the call but needs the heap memory sinchronized. Let
+us try with ptrace + userfaultfd
+

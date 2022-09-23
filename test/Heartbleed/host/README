@@ -1,0 +1,3 @@
+On Makefile we see -lsslhost and libsslhost.so. This is libssl.s0.1.1 and this is
+done so that more recent versions of SSL can be compiled on the same machine.
+The same applies to libcryptohost, a copy of libcrypto.so.1.1.

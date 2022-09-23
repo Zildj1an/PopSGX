@@ -1,0 +1,26 @@
+cat >user-data <<EOF
+#cloud-config
+password: hola
+chpasswd: { expire: False }
+ssh_pwauth: True
+EOF
+
+cloud-localds user-data.img user-data
+
+qemu-system-aarch64 \
+    -smp 2 -m 4G -M virt -cpu cortex-a57 -nographic \
+    -bios /usr/share/qemu-efi-aarch64/QEMU_EFI.fd \
+    -device virtio-blk-device,drive=image -drive if=none,id=image,file=ubuntu.img \
+    -device virtio-blk-device,drive=cloud -drive if=none,id=cloud,file=user-data.img \
+    -device e1000,netdev=net0 -netdev user,id=net0,hostfwd=tcp:127.0.0.1:5556-:22
+
+echo 'deb  https://download.01.org/intel-sgx/sgx_repo/ubuntu focal main' | sudo tee /etc/apt/sources.list.d/intel-sgx.list
+wget -qO - https://download.01.org/intel-sgx/sgx_repo/ubuntu/intel-sgx-deb.key | sudo apt-key add -
+
+echo "deb http://apt.llvm.org/focal/ llvm-toolchain-focal-10 main" | sudo tee /etc/apt/sources.list.d/llvm-toolchain-focal-10.list
+wget -qO - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+
+echo "deb https://packages.microsoft.com/ubuntu/20.04/prod focal main" | sudo tee /etc/apt/sources.list.d/msprod.list
+wget -qO - https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+
+sudo apt update

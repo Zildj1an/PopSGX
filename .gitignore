@@ -1,0 +1,79 @@
+# Prerequisites
+*.d
+*.swp
+*.s
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# PopSGX stuff
+dsm_userspace
+cscope.out
+tags
+*.cmake
+*.log
+*CMakeCache*
+*CMakeDir*
+oegdb
+oesgx
+oeverify
+openenclaverc
+oesign
+*.make
+*.img
+initrd*
+*.qcow2
+vmlinuz*
+CMakeCache.txt
+build
+popsgx_backup
+
+# Ignore the linux kernels
+qemu/linux-x86/
+qemu/linux-arm/

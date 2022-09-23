@@ -1,0 +1,1 @@
+/usr/bin/clang++-10 -g -rdynamic CMakeFiles/oeedger8r_basic_host.dir/basic_u.c.o CMakeFiles/oeedger8r_basic_host.dir/host.cpp.o -o oeedger8r_basic_host  ../../virtual/liboeedger8r_test_host.a -ldl 
